@@ -29,12 +29,13 @@ $(document).ready(function() {
       if (response) {
         let exchangeValues = [response.conversion_rates.BGN, response.conversion_rates.HUF, response.conversion_rates.KZT, response.conversion_rates.PLN, response.conversion_rates.RUB];
         let isoSymbols = ["BGN", "HUF", "KZT", "PLN", "RUB"];
+        let currencySymbols = ["лв", "Ft", "₸", "zł", "₽"]
         exchangeValues.map((element) => {
           exchangeArray.push(element);
         });
         exchangeAmounts = convertDollars(dollars, exchangeArray);
         for (let i = 0; i < 5; i ++) {
-          $("span#" + isoSymbols[i]).text(exchangeAmounts[i]);
+          $("span#" + isoSymbols[i]).text(currencySymbols[i] + exchangeAmounts[i]);
         }
       } else {
         $("#results").html(`There was an error handling your request.`);
