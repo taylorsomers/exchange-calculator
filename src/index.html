@@ -6,29 +6,35 @@
     <title></title>
   </head>
   <body>
-    <form class="to-convert">
+    <form id="to-convert">
       <div class="form-group">
-        <label for="dollars"></label>
+        <label for="dollars">U.S. Dollars:</label>
         <input type="number" id="dollars">
+      </div>
+      <div id="currencies" class="form-group">
+        <div>
+          <input class="currency" type="checkbox" name="BGN" value="BGN">
+          <label for="BGN">Bulgarian Lev (BGN) - лв</label>
+        </div>
+        <div>
+          <input class="currency" type="checkbox" name="HUF" value="HUF">
+          <label for="HUF">Hungarian Florint (HUF) - Ft</label>
+        </div>
+        <div>
+          <input class="currency" type="checkbox" name="KZT" value="KZT">
+          <label for="KZT">Kazakhstani Tenge (KZT) - ₸</label>
+        </div>
+        <div>
+          <input class="currency" type="checkbox" name="PLN" value="PLN">
+          <label for="PLN">Polish Złoty (PLN) - zł</label>
+        </div>
+        <div>
+          <input class="currency" type="checkbox" name="RUB" value="RUB">
+          <label for="RUB">Russian Ruble (RUB) - ₽</label>
+        </div>
       </div>
       <button id="convert" type="submit">Convert</button>
     </form>
-    <div id="results">
-      <p>
-        Bulgarian Lev: <span id="BGN"></span>
-      </p>
-      <p>
-        Hungarian Florint: <span id="HUF"></span>
-      </p>
-      <p>
-        Kazakhstani Tenge: <span id="KZT"></span>
-      </p>
-      <p id="PLN">
-        Polish Złoty: <span id="PLN"></span>
-      </p>
-      <p>
-        Russian Ruble: <span id="RUB"></span>
-      </p>
-    </div>
+    <div id="results"></div>
   </body>
 </html>
