@@ -1,16 +1,6 @@
-  $ npm install
-  $ npm install dotenv-webpack --save-dev
-  $ git init
-  $ git add .gitignore
-  $ git commit -m "Activate .gitignore"
-  $ npm run build
-  $ git add .
-  $ git commit -m "Initial global commit"
-  $ npm run start
+# Exchange Calculator
 
-# [Program Title]
-
-  ### By [Author(s)]
+  ### By Taylor Somers
 
 ## Description
 
@@ -37,7 +27,7 @@
 ## Installation
 
   1.  Download a web browser, such as Apple Safari, Brave, Google Chrome, Microsoft Edge, Mozilla Firefox, or Yandex.
-  2.  Navigate to [repository].
+  2.  Navigate to https://github.com/taylorsomers/exchange-calculator.
   3.  Click the green "Clone or download" button at the right of the screen.
   4.  Select "Download ZIP."
   5.  Use a file extractor or unzip program (such as PeaZip, Unzipper, WinZip, Zipware, or 7-ZIP) to extract the ZIP files onto your computer.
@@ -71,7 +61,9 @@
 
   | Program Behavior | Example Behavior | Example Output |
   | ----------- | ----------- | ----------- |
-  |  |  |  |
+  | Program accepts numeric input representing U.S. dollar amount the user wants to convert to a foreign currency. |  |  |
+  | Program allows the user to select from a menu of foreign currencies into which inputted U.S. dollar amount can be converted. |  |  |
+  | Program converts inputted U.S. dollar amount to whichever foreign currency the user selects and displays the converted amount on screen. |  |  |
   
 
 ## Known Bugs
@@ -81,8 +73,7 @@
 ### Contributors
 
   * Taylor Somers
-  * [Other Contributor(s): Anyone who contributed at least %5 of the total product.]
 
 ### License
 
-This website is licensed under the GNU General Public License GPLv3. (C) 2020 Taylor Somers. All rights reserved.
+Free to use under GNU General Public License GPLv3. (C) 2020 Taylor Somers. All rights reserved.
