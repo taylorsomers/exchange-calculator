@@ -12,17 +12,15 @@ function convertDollars(input, conversionRates) {
   return convertedDollars;
 }
 
-function unknownCurrency(array1, array2) {
-  for (let i = 0; i < array1.length; i ++) {
-    for (let j = 0; j < array2.length; i ++) {
-      if array1[i][1].every
-    if (!array2[j].includes(array1[i])) {
-      ("#results").html("<p>It looks like you either selected a currency our exchange rate calculator does not support or you did not select any available currencies to convert.</p>");
-    }
-  }
-}
-
-
+// function unknownCurrency(array1, array2) {
+//   for (let i = 0; i < array1.length; i ++) {
+//     for (let j = 0; j < array2.length; i ++) {
+//       if array1[i][1].every
+//     if (!array2[j].includes(array1[i])) {
+//       ("#results").html("<p>It looks like you either selected a currency our exchange rate calculator does not support or you did not select any available currencies to convert.</p>");
+//     }
+//   }
+// }
 
 $(document).ready(function() {
   $("#to-convert").submit(function(e) {
