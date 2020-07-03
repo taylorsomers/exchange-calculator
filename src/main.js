@@ -4,14 +4,6 @@ import './styles.css';
 import $ from "jquery";
 import { ExchangeService } from './../src/exchange-service.js';
 
-// function convertDollars(input, conversionRates) {
-//   let convertedDollars = [];
-//   conversionRates.map(function() {
-//     convertedDollars.push(input * );
-//   });
-//   return convertedDollars;
-// }
-
 function convertDollars(input, conversionRates) {
   let convertedDollars = [];
   for (let i = 0; i < 5; i ++) {
