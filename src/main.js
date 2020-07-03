@@ -36,11 +36,14 @@ $(document).ready(function() {
     function getElements(response) {
       if (response) {
         let exchangeValues = [response.conversion_rates.BGN, response.conversion_rates.HUF, response.conversion_rates.KZT, response.conversion_rates.PLN, response.conversion_rates.RUB];
+        let isoSymbols = ["BGN", "HUF", "KZT", "PLN", "RUB"];
         exchangeValues.map((element) => {
           exchangeArray.push(element);
         });
         exchangeAmounts = convertDollars(dollars, exchangeArray);
-        $("#results").text(exchangeAmounts);
+        for (let i = 0; i < 5; i ++) {
+          $("span#" + isoSymbols[i]).text(exchangeAmounts[i]);
+        }
       } else {
         $("#results").html(`There was an error handling your request.`);
       }
