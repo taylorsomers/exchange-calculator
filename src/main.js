@@ -15,9 +15,9 @@ function convertDollars(input, conversionRates) {
 $(document).ready(function() {
   $("#to-convert").submit(function(e) {
     (e).preventDefault();
+
     let dollars = $("#dollars").val();
     let toConvert = [];
-    let exchangeAmounts;
 
     $("input:checkbox[class=currency]:checked").each(function() {
       let currency = $(this).val();
@@ -42,13 +42,11 @@ $(document).ready(function() {
             }
           }
         }
-      
 
-        exchangeAmounts = convertDollars(dollars, exchangeArray);
-        for (let i = 0; i < exchangeArray.length; i ++) {
-          if () { 
-            $("span#" + exchangeValues[i][1]).text(exchangeValues[i][3] + exchangeAmounts[i]);
-          }
+        let exchangeAmounts = convertDollars(dollars, exchangeArray);
+        $("#output").html("<ul id='results'></ul>");
+        for (let i = 0; i < exchangeAmounts.length; i ++) {
+          $("#results").append("<li>" + exchangeArray[i][2] + exchangeAmounts[i] + "</li>");
         }
       } else {
         $("#results").html(`There was an error handling your request.`);
