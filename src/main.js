@@ -12,15 +12,14 @@ function convertDollars(input, conversionRates) {
   return convertedDollars;
 }
 
-// function unknownCurrency(array1, array2) {
-//   for (let i = 0; i < array1.length; i ++) {
-//     for (let j = 0; j < array2.length; i ++) {
-//       if array1[i][1].every
-//     if (!array2[j].includes(array1[i])) {
-//       ("#results").html("<p>It looks like you either selected a currency our exchange rate calculator does not support or you did not select any available currencies to convert.</p>");
-//     }
-//   }
-// }
+function unknownCurrency(array) {
+  const currencyList = ["BGN", "HUF", "KZT", "PLN", "RUB"];
+  for (let i = 0; i < array.length; i ++) {
+    if (!currencyList.includes(array[i])) {
+      ("#results").html("<p>It looks like you either selected a currency our exchange rate calculator does not support or you did not select any available currencies to convert.</p>");
+    }
+  }
+}
 
 $(document).ready(function() {
   $("#to-convert").submit(function(e) {
@@ -29,6 +28,7 @@ $(document).ready(function() {
     let dollars = $("#dollars").val();
     let toConvert = [];
 
+    // This generates the array of specific currencies into which the user wants to convert their inputted U.S. dollar amount.
     $("input:checkbox[class=currency]:checked").each(function() {
       let currency = $(this).val();
       (toConvert).push(currency);
@@ -45,7 +45,8 @@ $(document).ready(function() {
         let exchangeValues = [[response.conversion_rates.BGN, "BGN", "лв"], [response.conversion_rates.HUF, "HUF", "Ft"], [response.conversion_rates.KZT, "KZT", "₸"], [response.conversion_rates.PLN, "PLN", "zł"], [response.conversion_rates.RUB, "RUB", "₽"]];
         let exchangeArray = [];
 
-        unknownCurrency(toConvert, exchangeValues);
+        // This is a test for whether inputted currencies are not supported by the API; it is technically not possible for this type of error to occur, since the program only allows users to request exchange info on currencies supported by the API.
+        unknownCurrency(toConvert); 
 
         for (let i = 0; i < 5; i ++) {
           for (let j = 0; j < toConvert.length; j ++) {
@@ -61,7 +62,7 @@ $(document).ready(function() {
           $("#results").append("<li>" + exchangeArray[i][2] + exchangeAmounts[i] + "</li>");
         }
       } else {
-        $("#results").html(`There was an error handling your request.`);
+        $("#results").html(`There was an error handling your request. Either the currency exchange API did not respond or the currency exchange server does not include the queried information.`);
       }
     }
   });
