@@ -4,7 +4,7 @@
 
 ## Description
 
-  [Description of program functionality & intent presented as an elevator pitch.]
+  This program is a currency exchange calculator that takes a user-inputted dollar amount and converts it into one or more of five foreign currencies. The program was built in a WebPack environment using CSS, HTML, and JavaScript, and incorporates the Bootstrap and jQuery libraries. Significantly, it is the first major project in which I have been able to demonstrate the use of asynchronous functionality and API queries. 
 
 ## Languages & Technologies Used:
 
@@ -34,7 +34,7 @@
   6.  Open the directory containing the extracted files.
   7.  Open your computer's terminal and navigate to the directory bearing the name of the program and containing the top level subdirectories and files.
   8.  Enter the command "$ npm install" in the terminal and press "Enter".
-  9.  Follow the "Instructions for Obtaining an API Key" section below to obtain your unique API key for [API(s)].
+  9.  Follow the "Instructions for Obtaining an API Key" section below to obtain your unique API key for the Exchange Rate API.
   10.  Enter the command "$ npm run build" in the terminal and press "Enter".
   11. Enter the command "$ npm run start" in the terminal and press "Enter".
   12. The program should open and run with its user interface accessible in your default web browser.
@@ -42,7 +42,7 @@
   ### Instructions for Obtaining an API Key
 
     1.  Download a web browser, such as Apple Safari, Brave, Google Chrome, Microsoft Edge, Mozilla Firefox, or Yandex.
-    2.  Navigate to [API webpage].
+    2.  Navigate to https://www.exchangerate-api.com/.
     3.  Click the button to sign up for a new account or sign in to your existing account.
     4.  Navigate to the section of the API webpage that contains your API key.
     5.  Copy your API key.
@@ -61,9 +61,9 @@
 
   | Program Behavior | Example Behavior | Example Output |
   | ----------- | ----------- | ----------- |
-  | Program accepts numeric input representing U.S. dollar amount the user wants to convert to a foreign currency. |  |  |
-  | Program allows the user to select from a menu of foreign currencies into which inputted U.S. dollar amount can be converted. |  |  |
-  | Program converts inputted U.S. dollar amount to whichever foreign currency the user selects and displays the converted amount on screen. |  |  |
+  | Program accepts numeric input representing U.S. dollar amount the user wants to convert to a foreign currency. | "U.S. Dollars (USD) - $: 10" | N/A |
+  | Program allows the user to select from a menu of foreign currencies into which inputted U.S. dollar amount can be converted. | "Bulgarian Lev (BGN) - лв: Check; Hungarian Florint (HUF) - Ft: Check; Kazakhstani Tenge (KZT) - ₸: Check; Polish Złoty (PLN) - zł: Check; Russian Ruble (RUB) - ₽: Check" | N/A |
+  | Program converts inputted U.S. dollar amount to whichever foreign currency the user selects and displays the converted amount on screen. | "U.S. Dollars (USD) - $: 10; Bulgarian Lev (BGN) - лв: Check; Hungarian Florint (HUF) - Ft: Check; Kazakhstani Tenge (KZT) - ₸: Check; Polish Złoty (PLN) - zł: Check; Russian Ruble (RUB) - ₽: Check" | "Bulgarian Lev (BGN) - лв: 17.34; Hungarian Florint (HUF) - Ft: 3131.57; Kazakhstani Tenge (KZT) - ₸: 4054.77; Polish Złoty (PLN) - zł: 39.58; Russian Ruble (RUB) - ₽: 717.15" |
   
 
 ## Known Bugs

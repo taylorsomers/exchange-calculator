@@ -6,36 +6,44 @@
     <title></title>
   </head>
   <body>
-    <form id="to-convert">
-      <div class="form-group">
-        <label for="dollars">U.S. Dollars:</label>
-        <input type="number" id="dollars">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">Euro-Siberian ForEx</a>
+    </nav>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Euro-Siberian ForEx</h1>
       </div>
-      <div id="currencies" class="form-group">
-        <div>
-          <input class="currency" type="checkbox" name="BGN" value="BGN">
-          <label for="BGN">Bulgarian Lev (BGN) - лв</label>
+      <form id="to-convert">
+        <div class="form-group">
+          <label for="dollars">U.S. Dollars (USD) - $:</label>
+          <input type="number" id="dollars">
         </div>
-        <div>
-          <input class="currency" type="checkbox" name="HUF" value="HUF">
-          <label for="HUF">Hungarian Florint (HUF) - Ft</label>
+        <div id="currencies" class="form-group">
+          <div>
+            <input class="currency" type="checkbox" name="BGN" value="BGN">
+            <label for="BGN">Bulgarian Lev (BGN) - лв</label>
+          </div>
+          <div>
+            <input class="currency" type="checkbox" name="HUF" value="HUF">
+            <label for="HUF">Hungarian Florint (HUF) - Ft</label>
+          </div>
+          <div>
+            <input class="currency" type="checkbox" name="KZT" value="KZT">
+            <label for="KZT">Kazakhstani Tenge (KZT) - ₸</label>
+          </div>
+          <div>
+            <input class="currency" type="checkbox" name="PLN" value="PLN">
+            <label for="PLN">Polish Złoty (PLN) - zł</label>
+          </div>
+          <div>
+            <input class="currency" type="checkbox" name="RUB" value="RUB">
+            <label for="RUB">Russian Ruble (RUB) - ₽</label>
+          </div>
         </div>
-        <div>
-          <input class="currency" type="checkbox" name="KZT" value="KZT">
-          <label for="KZT">Kazakhstani Tenge (KZT) - ₸</label>
-        </div>
-        <div>
-          <input class="currency" type="checkbox" name="PLN" value="PLN">
-          <label for="PLN">Polish Złoty (PLN) - zł</label>
-        </div>
-        <div>
-          <input class="currency" type="checkbox" name="RUB" value="RUB">
-          <label for="RUB">Russian Ruble (RUB) - ₽</label>
-        </div>
+        <button id="convert" type="submit">Convert</button>
+      </form>
+      <div id="output">
       </div>
-      <button id="convert" type="submit">Convert</button>
-    </form>
-    <div id="output">
     </div>
   </body>
 </html>
