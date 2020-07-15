@@ -62,7 +62,7 @@ $(document).ready(function() {
           $("#results").append("<li>" + exchangeArray[i][2] + exchangeAmounts[i] + "</li>");
         }
       } else {
-        $("#ouput").html(`There was an error handling your request. Either the currency exchange API did not respond or the currency exchange server does not include the queried information.`);
+        $("#output").html(`There was an error handling your request. Either the currency exchange API did not respond or the currency exchange server does not include the queried information.`);
       }
     }
   });
